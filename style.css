@@ -13,20 +13,21 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     text-align: center;
     color: rgba(143, 143, 143, 0.8);
+    margin-bottom: auto;
 
 }
 
 p, button, input {
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 35px;
+    line-height: 0px;
     color: white;
-  margin-bottom:1em;
+  margin-bottom:25px;
   text-align: center;
 }
 
 #gameboard {
   position:relative;
-  margin:0 auto 2em auto;
+  margin:0 auto 450px auto;
   width:500px;
   height:500px;
 
@@ -37,8 +38,20 @@ p, button, input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 1px solid #ddd;
+  border: 2px solid lightblue;
   width:50px;
   height:50px;
-  color: rgba(143, 143, 143, 0.8);
+  background-color: rgba(0, 122, 179, 0.53);
 }
+
+#gameboard2 div {
+  position:absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid lightblue;
+  width:50px;
+  height:50px;
+  background-color: rgba(0, 122, 179, 0.53);
+}
+

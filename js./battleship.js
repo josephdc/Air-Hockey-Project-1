@@ -51,10 +51,12 @@ function fireMissile(e) {
       e.target.style.background = '#bbb';
       gameBoard[row][col] = 3;
 
+
     } else if (gameBoard[row][col] == 1) {
       e.target.style.background = 'red';
       gameBoard[row][col] = 2;
-
+        alert("HIT HIT HIT!")
+        sunkShip()
 
       hitCount++;
       if (hitCount == 17) {
@@ -62,8 +64,36 @@ function fireMissile(e) {
       }
 
     } else if (gameBoard[row][col] > 1) {
-      alert("Stop wasting your missiles! You already fired at this location.");
+      alert("You already fired at this location.");
     }
     }
     e.stopPropagation();
+
+  function sunkShip(){
+      if((gameBoard[0][3] == 2 && gameBoard[0][4] == 2) &&
+        (gameBoard [0][5] == 2 && gameBoard[0][6] == 2)){
+      alert("SHIP sunk!");
+  }
 }
+      if((gameBoard[3][6] == 2 && gameBoard[4][6] == 2) &&
+        (gameBoard[5][6] == 2 )){
+      alert("SHIP sunk!")
+      }
+
+      if((gameBoard[5][6] == 2 && gameBoard[5][7] == 2) &&
+        (gameBoard[5][8] == 2 && gameBoard[5][9])){
+      alert("SHIP sunk!")
+}
+      if((gameBoard[5][0] == 2 && gameBoard[6][0] == 2) &&
+        (gameBoard[7][0] == 2 && gameBoard[8][0] == 2 &&
+          gameBoard[9][0])){
+      alert("Ship sunk!")
+}
+      if((gameBoard[7][3] == 2 && gameBoard[8][3] == 2)){
+      alert("Ship sunk!")
+}
+}
+
+
+
+
