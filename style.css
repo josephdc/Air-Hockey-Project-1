@@ -6,52 +6,55 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: 1300px;
+    position: relative;
 }
 
 h1 {
-    font-size: 200px;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 140px;
+    font-family: 'Black Ops One', cursive;
     text-align: center;
     color: rgba(143, 143, 143, 0.8);
     margin-bottom: auto;
-
 }
 
-p, button, input {
+button, input {
     font-size: 35px;
     line-height: 0px;
     color: white;
-  margin-bottom:25px;
+  margin:-400px;
   text-align: center;
+}
+p {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+
+
 }
 
 #gameboard {
   position:relative;
-  margin:0 auto 450px auto;
+  margin:0 auto 30px auto;
   width:500px;
   height:500px;
 
 }
 
 #gameboard div {
-  position:absolute;
+  position: absolute;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 2px solid lightblue;
+  border-style: dashed;
   width:50px;
   height:50px;
   background-color: rgba(0, 122, 179, 0.53);
 }
 
-#gameboard2 div {
-  position:absolute;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 2px solid lightblue;
-  width:50px;
-  height:50px;
-  background-color: rgba(0, 122, 179, 0.53);
+#how-to-play div {
+  text-align: center;
+  color: white;
+  font-family: 3px;
 }
 
