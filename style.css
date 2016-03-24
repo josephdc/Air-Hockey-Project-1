@@ -1,8 +1,8 @@
 body {
+    background-image: url("http://wallpapercraze.com/images/wallpapers/blue_battleship_w1.jpeg");
     margin: 10px auto;
     width: 70%;
     max-width: 950px;
-    background-image: url("http://wallpapercraze.com/images/wallpapers/blue_battleship_w1.jpeg");
     background-position: center;
     background-attachment: fixed;
     background-size: 1300px;
@@ -17,17 +17,10 @@ h1 {
     margin-bottom: auto;
 }
 
-button, input {
-    font-size: 35px;
-    line-height: 0px;
-    color: white;
-  margin:-400px;
-  text-align: center;
-}
 p {
   color: white;
   font-family: 'Quantico', sans-serif;
-  margin: 8px;
+  margin: 10px;
   text-transform: uppercase;
 }
 .stats {

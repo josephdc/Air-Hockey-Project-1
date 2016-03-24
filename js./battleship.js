@@ -3,10 +3,6 @@ var rows = 10;
 var cols = 10;
 var squareSize = 50;
 
-var hits = 0;
-var shipsSank = 0;
-var missilesLaunched = 0;
-
 var sunkShips = [false,false,false,false,false];
 
 var gameBoardContainer = document.getElementById("gameboard");
@@ -134,7 +130,7 @@ var gameBoards = [
             [[7, 6], [7, 7], [7, 8], [7, 9]]
           ]
       }
-]
+                ]
 
 gameBoard = gameBoards[Math.floor(Math.random() * 5)]
 
@@ -157,7 +153,7 @@ function fireMissile(e) {
     } else if (gameBoard.board[row][col] == 1) {
       e.target.style.background = 'red';
       gameBoard.board[row][col] = 2;
-        alert("HIT HIT HIT! Target HITS = " + hitCount + " of 20 ")
+        document.getElementById("hitcount").innerHTML = "HITS: " + hitCount + " of 20"
         sunkShip(row, col)
 
       hitCount++;
@@ -174,26 +170,24 @@ function fireMissile(e) {
 
 function sunkShip(){
   gameBoard.ships.forEach(function(ship, index) {
-      sunk = true
-      ship.forEach(function (position) {
-        console.log(position)
-          if (gameBoard.board[position[0]][position[1]] != 2){
-          sunk = false
-          }
-        console.log(sunk)
-        })
+    sunk = true
+    ship.forEach(function (position) {
+      console.log(position)
+      if (gameBoard.board[position[0]][position[1]] != 2){
+            sunk = false
+      }
+      console.log(sunk)
+    })
     if (sunk && !sunkShips[index])
-  {
+    {
       sunkShips[index] = true
       var shipsSank = sunkShips.filter(function (el){
-          return el;
+        return el;
       }).length
-      alert ("You SANK a ship! Total ships sank = " + shipsSank + " of 5")
-
-      }
-    })
-
-  }
+      document.getElementById("shipcount").innerHTML = "SHIPS SANK: " + shipsSank + " of 5 "
+    }
+  })
+}
 
 
 
