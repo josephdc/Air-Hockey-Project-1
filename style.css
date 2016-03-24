@@ -41,7 +41,7 @@ p {
   width:300px;
   display: inline-block;
   height: 500px;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .statItem {
@@ -69,6 +69,12 @@ p {
   background-color: rgba(0, 122, 179, 0.53);
 }
 
+h2 {
+  font-family: 10px;
+  font-family: 'Quantico', sans-serif;
+  margin: 9px;
+}
+
 #how-to-play {
   text-align: center;
   color: white;
@@ -82,10 +88,7 @@ p {
   position: absolute;
 }
 
-
-
-
-p:hover{
-  color:red;
+h2, p:hover {
+  color: red;
   cursor: pointer;
 }

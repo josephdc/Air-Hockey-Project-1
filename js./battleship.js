@@ -6,7 +6,7 @@ var squareSize = 50;
 var hits = 0;
 var shipsSank = 0;
 var missilesLaunched = 0;
-var misslesRemaining = 0;
+
 var sunkShips = [false,false,false,false,false];
 
 var gameBoardContainer = document.getElementById("gameboard");
@@ -26,7 +26,7 @@ for (i = 0; i < cols; i++) {
     square.style.left = leftPosition + 'px';
   }
 }
-var hitCount = 0;
+var hitCount = 1;
 
 var gameBoards = [
       {
@@ -55,20 +55,20 @@ var gameBoards = [
             [0,0,0,0,0,0,0,0,0,0],
             [1,1,1,1,1,0,0,0,0,0],
             [0,0,0,1,0,0,0,0,0,0],
-            [0,0,0,1,0,0,0,1,1,1],
+            [0,0,0,1,0,0,1,1,1,1],
             [0,0,0,1,0,0,0,0,0,0],
             [0,0,0,1,0,0,0,0,0,0],
             [0,0,0,0,0,0,1,1,1,1],
             [0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0,0,0,0],
-            [0,1,1,1,1,0,0,0,0,0]
+            [0,1,1,1,0,0,0,0,0,0]
           ],
         ships: [
             [[1, 0], [1, 1], [1, 2], [1, 3], [1, 4]],
             [[2, 3], [3, 3], [4, 3], [5, 3]],
-            [[3, 7], [3, 8], [3, 9]],
+            [[3, 6], [3, 7], [3, 8], [3, 9]],
             [[6, 6], [6, 7], [6, 8], [6, 9]],
-            [[9, 1], [9, 2], [9, 3], [9,4]]
+            [[9, 1], [9, 2], [9, 3]]
         ]
       },
       {
@@ -157,7 +157,7 @@ function fireMissile(e) {
     } else if (gameBoard.board[row][col] == 1) {
       e.target.style.background = 'red';
       gameBoard.board[row][col] = 2;
-        alert("HIT HIT HIT!")
+        alert("HIT HIT HIT! Target HITS = " + hitCount + " of 20 ")
         sunkShip(row, col)
 
       hitCount++;
@@ -184,8 +184,12 @@ function sunkShip(){
         })
     if (sunk && !sunkShips[index])
   {
-      alert ("You SANK a ship!")
       sunkShips[index] = true
+      var shipsSank = sunkShips.filter(function (el){
+          return el;
+      }).length
+      alert ("You SANK a ship! Total ships sank = " + shipsSank + " of 5")
+
       }
     })
 
