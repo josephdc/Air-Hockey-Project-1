@@ -136,8 +136,6 @@ var gameBoards = [
       }
 ]
 
-
-
 gameBoard = gameBoards[Math.floor(Math.random() * 5)]
 
 gameBoardContainer.addEventListener("click", fireMissile, false);
@@ -163,17 +161,15 @@ function fireMissile(e) {
         sunkShip(row, col)
 
       hitCount++;
-      if (hitCount == 17) {
-        alert("All enemy battleships have been defeated! You WIN!");
+      if (hitCount == 20) {
+        alert("YOU WIN! All enemy battleships have been defeated!");
       }
 
     } else if (gameBoard.board[row][col] > 1) {
-      alert("STOP! Wasting your missiles you already fired at this location.");
+      alert("STOP...Wasting your missiles you already fired at this location.");
     }
     }
-
     e.stopPropagation();
-
   }
 
 function sunkShip(){
@@ -187,13 +183,13 @@ function sunkShip(){
         console.log(sunk)
         })
     if (sunk && !sunkShips[index])
-{
+  {
       alert ("You SANK a ship!")
       sunkShips[index] = true
       }
     })
 
-}
+  }
 
 
 

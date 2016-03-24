@@ -9,27 +9,35 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
-  </head>
   <body>
+  </head>
 
   <h1>BATTLESHIP</h1>
+
+<div class="panel">
+
+  <div class="stats">
+  <p class="statItem">HITS:</p>
+  <p class="statItem">SHIPS SANK:</p>
+  <p class="statItem">MISSILES LAUNCHED:</p>
+
+
+  </div>
+  <div id="how-to-play" class="how_to_play">
+  <p><u>HOW TO PLAY:</u></p>
+  <p>Object of game is to sink all 5 enemy ships.</p>
+
+  <p>CLICK a square to land your missile on target.</p>
+  <p>Red square = Missile hit target</p>
+  <p>Grey square = Missile missed target.</p>
+  </div>
+
+</div>
 
   <div id="gameboard">
   </div>
 
-<div id="how-to-play">
-<p><u>HOW TO PLAY:</u></p>
-<p>Object of game is to sink all 5 enemy ships.</p>
 
-<p>CLICK a square to land your missile on target.</p>
-<p>Red square = Missile hits target</p>
-<p>Grey square = Missile missed target.</p>
-</div>
-
-<div id="stats">
-<p>hits - how many red squares have you hit?</p>
-<p>shipsSank - how many shops have you sank?</p>
-</div>
 
 
   <script  src="js./battleship.js"></script>

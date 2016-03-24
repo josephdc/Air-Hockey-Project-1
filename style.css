@@ -25,15 +25,27 @@ button, input {
   text-align: center;
 }
 p {
-  text-indent: 170px;
-  font-size: 20px;
   color: white;
   font-family: 'Quantico', sans-serif;
   margin: 8px;
+  text-transform: uppercase;
 }
-#stats {
-  text-align: left;
+.stats {
+  width: 100%;
+  line-height: 80px;
+  text-align: center;
+  font-size: 20px;
+}
 
+.panel {
+  width:300px;
+  display: inline-block;
+  height: 500px;
+  font-size: 15px;
+}
+
+.statItem {
+  background-color: rgba(69, 69, 69, 0.53);
 }
 
 #gameboard {
@@ -41,7 +53,8 @@ p {
   margin:0 auto 30px auto;
   width:500px;
   height:500px;
-
+  display: inline-block;
+  float: right;
 }
 
 #gameboard div {
@@ -62,8 +75,17 @@ p {
   font-family: 3px;
   border: -2px solid gray;
   background-color: rgba(69, 69, 69, 0.53);
-  width: 825px;
+  width: 300px;
   text-align: left;
   padding: 0px;
+  bottom: 0;
+  position: absolute;
 }
 
+
+
+
+p:hover{
+  color:red;
+  cursor: pointer;
+}
